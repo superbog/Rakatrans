@@ -1,0 +1,74 @@
+---
+layout: form
+title: Order
+permalink: /order2/
+---
+
+<!-- Slider Start -->
+<section id="global-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block">
+          <h1>Formulir Sewa Mobil</h1>
+          <p>Silahkan mengisi Formulir Order untuk Pemesanan, setelah Order anda kirim, kami akan segera memberikan Konfirmasi tentang  Biaya Sewa dan Tujuan Rekening  Pembayaran.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- contact form start -->
+<section id="contact-form">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="block">
+          <form action="https://formspree.io/boogie.setyanggono@gmail.com" method="POST">
+            <div class="form-group">
+              <input type="text" class="form-control" required="true" name="Nama" placeholder="Nama Anda">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" required="true" name="Email" placeholder="Alamat Email">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" required="true" name="Nomor-HP" placeholder="Nomor HP">
+            </div>
+            <div class="form-group">
+                <select class="form-control" required="true" name="Jenis Mobil" placeholder="Jenis Mobil">
+                    <option default>Jenis Mobil</option>
+                    <option>New Isuzu ELF Long</option>
+                    <option>New Isuzu ELF Short</option>
+                    <option>New Toyota Hiace</option>
+                    <option>Toyota New Avanza</option>
+                    <option>Toyota Grand Innova</option>
+                    <option>Suzuki Ertiga</option>
+                  </select>
+            </div>  
+            <div class="form-group">
+                <input type="text" class="form-control" required="true" name="Lama Sewa" placeholder="Lama Sewa">
+            </div>  
+            <div class="form-group">
+                  <div class='input-group date' id='datetimepicker1'>
+                      <input type='text' class="form-control" required="true" name="Tanggal Sewa" placeholder="Tanggal Sewa"/>
+                      <span class="input-group-addon">
+                          <span class="glyphicon glyphicon-calendar"></span>
+                      </span>
+                  </div>
+              </div>
+          <script type="text/javascript">
+              $(function () {
+                  $('#datetimepicker1').datetimepicker();
+              });
+          </script>
+            </div>  
+            
+            <div class="form-group">
+              <textarea class="form-control" rows="6" name="Pesan" placeholder="Pesan jika ada"></textarea>
+            </div>
+            <button class="btn btn-default" type="submit">Order</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -3,7 +3,6 @@
   <head>
 
     {% include head.html %}
-    {% include formhead.html %}
     
 
   </head>
@@ -11,6 +10,12 @@
 
 
     {% include header.html %}
+    <script type="text/javascript" src="{{ site.baseurl }}/js/calendar/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}/js/calendar/moment.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}/js/calendar/transition.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}/js/calendar/collapse.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}/js/calendar/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}/js/calendar/bootstrap-datetimepicker.min.js"></script>
 
 
     {{ content }}
@@ -24,6 +29,6 @@
 
 
     {% include footer.html %}
-    <script type="text/javascript">JotForm.ownerView=true;</script>
+    
     </body>
 </html>

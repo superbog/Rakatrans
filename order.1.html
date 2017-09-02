@@ -1,9 +1,30 @@
 ---
 layout: page
-title: form
+title: Order
 permalink: /order-new/
 ---
 
+<script src="https://cdn.jotfor.ms/static/prototype.forms.js" type="text/javascript"></script>
+<script src="https://cdn.jotfor.ms/static/jotform.forms.js?3.3.1525" type="text/javascript"></script>
+<script type="text/javascript">
+   JotForm.init(function(){
+
+ JotForm.calendarMonths = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+ JotForm.calendarDays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+ JotForm.calendarOther = {"today":"Today"};
+ var languageOptions = document.querySelectorAll('#langList li'); 
+ for(var langIndex = 0; langIndex < languageOptions.length; langIndex++) { 
+   languageOptions[langIndex].on('click', function(e) { setTimeout(function(){ JotForm.setCalendar("9", false, {"days":{"monday":true,"tuesday":true,"wednesday":true,"thursday":true,"friday":true,"saturday":true,"sunday":true},"future":true,"past":true,"custom":false,"ranges":false,"start":"","end":""}); }, 0); });
+ } 
+ JotForm.setCalendar("9", false, {"days":{"monday":true,"tuesday":true,"wednesday":true,"thursday":true,"friday":true,"saturday":true,"sunday":true},"future":true,"past":true,"custom":false,"ranges":false,"start":"","end":""});
+      FormTranslation.init({"detectUserLanguage":"1","firstPageOnly":"0","options":"Indonesian","originalLanguage":"id","primaryLanguage":"id","saveUserLanguage":"1","showStatus":"flag-with-nation","theme":"light-theme","version":"2"});
+    /*INIT-END*/
+});
+
+   JotForm.prepareCalculationsOnTheFly([null,{"qid":"1","text":"Nama","type":"control_textbox"},null,null,null,null,null,{"name":"7","qid":"7","text":"Pesan Jika ada","type":"control_textarea"},null,{"name":"date","qid":"9","text":"Tanggal Sewa","type":"control_datetime"},null,null,{"name":"formulirSewa","qid":"12","text":"Formulir Sewa Mobil","type":"control_head"},{"name":"submit","qid":"13","text":"Order","type":"control_button"},{"name":"email","qid":"14","text":"Email","type":"control_email"},null,{"name":"typeA16","qid":"16","text":"Jenis Mobil","type":"control_dropdown"},{"name":"number","qid":"17","text":"Nomor HP","type":"control_number"}]);
+   setTimeout(function() {
+JotForm.paymentExtrasOnTheFly([null,{"qid":"1","text":"Nama","type":"control_textbox"},null,null,null,null,null,{"name":"7","qid":"7","text":"Pesan Jika ada","type":"control_textarea"},null,{"name":"date","qid":"9","text":"Tanggal Sewa","type":"control_datetime"},null,null,{"name":"formulirSewa","qid":"12","text":"Formulir Sewa Mobil","type":"control_head"},{"name":"submit","qid":"13","text":"Order","type":"control_button"},{"name":"email","qid":"14","text":"Email","type":"control_email"},null,{"name":"typeA16","qid":"16","text":"Jenis Mobil","type":"control_dropdown"},{"name":"number","qid":"17","text":"Nomor HP","type":"control_number"}]);}, 20); 
+</script>
 <!-- Slider Start -->
 <section id="global-header">
   <div class="container">
@@ -18,6 +39,7 @@ permalink: /order-new/
   </div>
 </section>
 <!-- contact form start -->
+
 <section id="contact-form">
   <div class="container">
     <div class="row">
@@ -26,246 +48,108 @@ permalink: /order-new/
           <form class="jotform-form" action="https://submit.jotform.me/submit/72397973779481/" method="post" name="form_72397973779481" id="72397973779481" accept-charset="utf-8">
             <input type="hidden" name="formID" value="72397973779481" />
             <div class="form-all">
-                <link type="text/css" rel="stylesheet" media="all" href="https://cdn.jotfor.ms/wizards/languageWizard/custom-dropdown/css/lang-dd.css?3.3.1525" />
-                <div class="cont">
-                  <input type="text" id="input_language" name="input_language" style="display:none" />
-                  <div class="language-dd" id="langDd" style="display:none">
-                    <div class="dd-placeholder lang-emp">
-                      Language
-                    </div>
-                    <ul class="lang-list dn" id="langList">
-                      <li data-lang="id" class="id">
-                        Indonesian
-                      </li>
-                    </ul>
+              <link type="text/css" rel="stylesheet" media="all" href="https://cdn.jotfor.ms/wizards/languageWizard/custom-dropdown/css/lang-dd.css?3.3.1525" />
+              <div class="cont">
+                <input type="text" id="input_language" name="input_language" style="display:none" />
+                <div class="language-dd" id="langDd" style="display:none">
+                  <div class="dd-placeholder lang-emp">
+                    Language
                   </div>
+                  <ul class="lang-list dn" id="langList">
+                    <li data-lang="id" class="id">
+                      Indonesian
+                    </li>
+                  </ul>
                 </div>
-                <script type="text/javascript" src="https://cdn.jotfor.ms/js/formTranslation.v2.js?3.3.1525"></script>
-            <div class="form-group" data-type="control_textbox" id="id_1">
-              <input type="text" class="form-control" required="true" placeholder="Nama Anda" id="input_1" name="q1_nama">
-            </div>
-            <div class="form-group" data-type="control_email" id="id_14">
-              <input type="text" class="form-control" required="true" placeholder="Alamat Email" data-type="control_email" id="id_14">
-            </div>
-            <div class="form-group" data-type="control_phone" id="id_10">
-              <input type="text" class="form-control" required="true" placeholder="Nomor HP" id="label_10" for="input_10_area">
+              </div>
+              <script type="text/javascript" src="https://cdn.jotfor.ms/js/formTranslation.v2.js?3.3.1525"></script>
+            <div class="form-group">
+              <input type="text" class="form-control" required="true" id="input_1" name="q1_nama" data-type="input-textbox" placeholder="Nama Anda">
             </div>
             <div class="form-group">
-                <select class="form-control" required="true" placeholder="Jenis Mobil">
-                    <option default>Jenis Mobil</option>
-                    <option>New Isuzu ELF Long</option>
-                    <option>New Isuzu ELF Short</option>
-                    <option>New Toyota Hiace</option>
-                    <option>Toyota New Avanza</option>
-                    <option>Toyota Grand Innova</option>
-                    <option>Suzuki Ertiga</option>
+              <input type="email" class="form-control" required="true" id="input_14" name="q14_email" class="form-textbox validate[Email]" placeholder="Alamat Email">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" required="true" id="input_17" name="q17_number" data-type="input-number" placeholder="Nomor HP">
+            </div>
+            <div class="form-group">
+
+              <label for="label_16">Jenis Mobil</label>
+                <select class="form-control" required="true" id="label_16" for="input_16" placeholder="Jenis Mobil">
+                    <option value="">  </option>
+                    <option value="New Isuzu ELF Long"> New Isuzu ELF Long </option>
+                    <option value="New Isuzu ELF Short"> New Isuzu ELF Short </option>
+                    <option value="New Toyota Hiace"> New Toyota Hiace </option>
+                    <option value="Toyota New Avanza"> Toyota New Avanza </option>
+                    <option value="Toyota Grand Innova"> Toyota Grand Innova </option>
+                    <option value="Toyota Innova Reborn"> Toyota Innova Reborn </option>
+                    <option value="Daihatsu Xenia"> Daihatsu Xenia </option>
+                    <option value="Suzuki Ertiga"> Suzuki Ertiga </option>
                   </select>
             </div>  
+            <div class="form-group" data-type="control_datetime" id="id_9">
+                <label id="label_9" for="lite_mode_9"> Tanggal Sewa </label>
+                <div id="cid_9" class="form-control">
+                  <div data-wrapper-react="true">
+                    <div style="display:none;">
+                      <span class="form-sub-label-container" >
+                        <input class="form-textbox validate[disallowPast, limitDate]" id="day_9" name="q9_date[day]" type="tel" size="2" data-maxlength="2" value="" />
+                        <span class="date-separate">
+                           -
+                        </span>
+                        <label class="form-sub-label" for="day_9" id="sublabel_day" > Day </label>
+                      </span>
+                      <span class="form-sub-label-container" >
+                        <input class="form-textbox validate[disallowPast, limitDate]" id="month_9" name="q9_date[month]" type="tel" size="2" data-maxlength="2" value="" />
+                        <span class="date-separate">
+                           -
+                        </span>
+                        <label class="form-sub-label" for="month_9" id="sublabel_month" > Month </label>
+                      </span>
+                      <span class="form-sub-label-container" >
+                        <input class="form-textbox validate[disallowPast, limitDate]" id="year_9" name="q9_date[year]" type="tel" size="4" data-maxlength="4" value="" />
+                        <label class="form-sub-label" for="year_9" id="sublabel_year" > Year </label>
+                      </span>
+                    </div>
+                    <span class="form-sub-label-container" >
+                      <input class="form-textbox validate[disallowPast, limitDate, validateLiteDate]" id="lite_mode_9" type="text" size="12" data-maxlength="12" value="" data-format="ddmmyyyy" data-seperator="-" placeholder="dd-mm-yyyy" />
+                      <label class="form-sub-label" for="lite_mode_9" id="sublabel_litemode" > Tanggal </label>
+                    </span>
+                    <span class="form-sub-label-container" >
+                      <img alt="Pick a Date" id="input_9_pick" src="https://cdn.jotfor.ms/images/calendar.png" style="vertical-align:middle;" data-component="datetime" />
+                      <label class="form-sub-label" for="input_9_pick" >  </label>
+                    </span>
+                  </div>
+                </div>
+              </div>
             <div class="form-group">
-                <input type="text" class="form-control" required="true" placeholder="Lama Sewa">
-            </div>  
-            <div class="form-group">
-                <input type="text" class="form-control" required="true" placeholder="Tanggal Sewa">
-            </div>  
-            <div class="form-group">
-              <textarea class="form-control" rows="6" placeholder="Pesan jika ada"></textarea>
+              <textarea class="form-control" rows="6" id="input_7" name="q7_7"  rows="10" data-component="textarea" placeholder="Pesan jika ada"></textarea>
             </div>
-            <button class="btn btn-default" type="submit">Order</button>
+            <button class="btn btn-default" type="submit" id="input_13" >Order</button>
           </form>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-<form class="jotform-form" action="https://submit.jotform.me/submit/72397973779481/" method="post" name="form_72397973779481" id="72397973779481" accept-charset="utf-8">
-  <input type="hidden" name="formID" value="72397973779481" />
-  <div class="form-all">
-    <link type="text/css" rel="stylesheet" media="all" href="https://cdn.jotfor.ms/wizards/languageWizard/custom-dropdown/css/lang-dd.css?3.3.1525" />
-    <div class="cont">
-      <input type="text" id="input_language" name="input_language" style="display:none" />
-      <div class="language-dd" id="langDd" style="display:none">
-        <div class="dd-placeholder lang-emp">
-          Language
-        </div>
-        <ul class="lang-list dn" id="langList">
-          <li data-lang="id" class="id">
-            Indonesian
-          </li>
-        </ul>
+<script>
+    JotForm.showJotFormPowered = "new_footer";
+    </script>
+    <input type="hidden" id="simple_spc" name="simple_spc" value="72397973779481" />
+    <script type="text/javascript">
+    document.getElementById("si" + "mple" + "_spc").value = "72397973779481-72397973779481";
+    </script>
+    <div class="formFooter-heightMask">
+    </div>
+    <div class="formFooter">
+      <a href="https://www.jotform.com/?utm_source=formfooter&utm_medium=banner&utm_term=72397973779481&utm_content=jotform_logo&utm_campaign=powered_by_jotform_signup_hp" target="_blank" class="formFooter-logoLink"><img class="formFooter-logo" src="https://cdn.jotfor.ms/assets/img/logo/logo-new@1x.png" alt="" style="height: 44px;"></a>
+      <div class="formFooter-rightSide">
+        <span class="formFooter-text">
+          Now create your own JotForm - It's free!
+        </span>
+        <a class="formFooter-button" href="https://www.jotform.com/?utm_source=formfooter&utm_medium=banner&utm_term=72397973779481&utm_content=jotform_button&utm_campaign=powered_by_jotform_signup_hp" target="_blank">Create your own JotForm</a>
       </div>
     </div>
-    <script type="text/javascript" src="https://cdn.jotfor.ms/js/formTranslation.v2.js?3.3.1525"></script>
-    <ul class="form-section page-section">
-      <li id="cid_12" class="form-input-wide" data-type="control_head">
-        <div class="form-header-group ">
-          <div class="header-text httal htvam">
-            <h2 id="header_12" class="form-header" data-component="header">
-              Formulir Sewa Mobil
-            </h2>
-            <div id="subHeader_12" class="form-subHeader">
-              Silahkan mengisi Formulir Order untuk Pemesanan, setelah Order anda kirim, kami akan segera memberikan Konfirmasi tentang Biaya Sewa dan Tujuan Rekening Pembayaran.
-            </div>
-          </div>
-        </div>
-      </li>
-
-      <li class="form-line" data-type="control_textbox" id="id_1">
-        <label class="form-label form-label-left form-label-auto" id="label_1" for="input_1"> Nama </label>
-        <div id="cid_1" class="form-input jf-required">
-          <input type="text" id="input_1" name="q1_nama" data-type="input-textbox" class="form-textbox" size="20" value="" data-component="textbox" />
-        </div>
-      </li>
-      <li class="form-line" data-type="control_email" id="id_14">
-        <label class="form-label form-label-left form-label-auto" id="label_14" for="input_14"> Email </label>
-        <div id="cid_14" class="form-input jf-required">
-          <span class="form-sub-label-container" style="vertical-align:top;">
-            <input type="email" id="input_14" name="q14_email" class="form-textbox validate[Email]" size="30" value="" data-component="email" />
-            <label class="form-sub-label" for="input_14" style="min-height:13px;"> example@example.com </label>
-          </span>
-        </div>
-      </li>
-      <!-- INSPECT -->
-      <li class="form-line" data-type="control_phone" id="id_10">
-        <label class="form-label form-label-left form-label-auto" id="label_10" for="input_10_area"> Nomor HP </label>
-        <div id="cid_10" class="form-input jf-required">
-          <div data-wrapper-react="true">
-            <span class="form-sub-label-container" style="vertical-align:top;">
-              <input type="tel" id="input_10_area" name="q10_phoneNumber[area]" class="form-textbox" size="3" value="" data-component="areaCode" />
-              <span class="phone-separate">
-                 -
-              </span>
-              <label class="form-sub-label" for="input_10_area" id="sublabel_area" style="min-height:13px;">  </label>
-            </span>
-            <span class="form-sub-label-container" style="vertical-align:top;">
-              <input type="tel" id="input_10_phone" name="q10_phoneNumber[phone]" class="form-textbox" size="8" value="" data-component="phone" />
-              <label class="form-sub-label" for="input_10_phone" id="sublabel_phone" style="min-height:13px;"> Phone Number </label>
-            </span>
-          </div>
-        </div>
-      </li>
-      <li class="form-line" data-type="control_radio" id="id_11">
-        <label class="form-label form-label-left form-label-auto" id="label_11" for="input_11"> Jenis Mobil </label>
-        <div id="cid_11" class="form-input jf-required">
-          <div class="form-multiple-column" data-columncount="2" data-component="radio">
-            <span class="form-radio-item">
-              <span class="dragger-item">
-              </span>
-              <input type="radio" class="form-radio" id="input_11_0" name="q11_typeA" value="New Isuzu ELF Long" />
-              <label id="label_input_11_0" for="input_11_0"> New Isuzu ELF Long </label>
-            </span>
-            <span class="form-radio-item">
-              <span class="dragger-item">
-              </span>
-              <input type="radio" class="form-radio" id="input_11_1" name="q11_typeA" value="New Isuzu ELF Short" />
-              <label id="label_input_11_1" for="input_11_1"> New Isuzu ELF Short </label>
-            </span>
-            <span class="form-radio-item" style="clear:left;">
-              <span class="dragger-item">
-              </span>
-              <input type="radio" class="form-radio" id="input_11_2" name="q11_typeA" value="New Toyota Hiace" />
-              <label id="label_input_11_2" for="input_11_2"> New Toyota Hiace </label>
-            </span>
-            <span class="form-radio-item">
-              <span class="dragger-item">
-              </span>
-              <input type="radio" class="form-radio" id="input_11_3" name="q11_typeA" value="Toyota New Avanza" />
-              <label id="label_input_11_3" for="input_11_3"> Toyota New Avanza </label>
-            </span>
-            <span class="form-radio-item" style="clear:left;">
-              <span class="dragger-item">
-              </span>
-              <input type="radio" class="form-radio" id="input_11_4" name="q11_typeA" value="Toyota Grand Innova" />
-              <label id="label_input_11_4" for="input_11_4"> Toyota Grand Innova </label>
-            </span>
-            <span class="form-radio-item">
-              <span class="dragger-item">
-              </span>
-              <input type="radio" class="form-radio" id="input_11_5" name="q11_typeA" value="Suzuki Ertiga" />
-              <label id="label_input_11_5" for="input_11_5"> Suzuki Ertiga </label>
-            </span>
-          </div>
-        </div>
-      </li>
-      <li class="form-line" data-type="control_textbox" id="id_5">
-        <label class="form-label form-label-left form-label-auto" id="label_5" for="input_5"> Lama Sewa </label>
-        <div id="cid_5" class="form-input jf-required">
-          <input type="text" id="input_5" name="q5_5" data-type="input-textbox" class="form-textbox" size="20" value="" data-component="textbox" />
-        </div>
-      </li>
-      <li class="form-line" data-type="control_datetime" id="id_9">
-        <label class="form-label form-label-left form-label-auto" id="label_9" for="lite_mode_9"> Tanggal Sewa </label>
-        <div id="cid_9" class="form-input jf-required">
-          <div data-wrapper-react="true">
-            <div style="display:none;">
-              <span class="form-sub-label-container" style="vertical-align:top;">
-                <input class="form-textbox validate[disallowPast, limitDate]" id="day_9" name="q9_date[day]" type="tel" size="2" data-maxlength="2" value="" />
-                <span class="date-separate">
-                   -
-                </span>
-                <label class="form-sub-label" for="day_9" id="sublabel_day" style="min-height:13px;"> Day </label>
-              </span>
-              <span class="form-sub-label-container" style="vertical-align:top;">
-                <input class="form-textbox validate[disallowPast, limitDate]" id="month_9" name="q9_date[month]" type="tel" size="2" data-maxlength="2" value="" />
-                <span class="date-separate">
-                   -
-                </span>
-                <label class="form-sub-label" for="month_9" id="sublabel_month" style="min-height:13px;"> Month </label>
-              </span>
-              <span class="form-sub-label-container" style="vertical-align:top;">
-                <input class="form-textbox validate[disallowPast, limitDate]" id="year_9" name="q9_date[year]" type="tel" size="4" data-maxlength="4" value="" />
-                <label class="form-sub-label" for="year_9" id="sublabel_year" style="min-height:13px;"> Year </label>
-              </span>
-            </div>
-            <span class="form-sub-label-container" style="vertical-align:top;">
-              <input class="form-textbox validate[disallowPast, limitDate, validateLiteDate]" id="lite_mode_9" type="text" size="12" data-maxlength="12" value="" data-format="ddmmyyyy" data-seperator="-" placeholder="dd-mm-yyyy" />
-              <label class="form-sub-label" for="lite_mode_9" id="sublabel_litemode" style="min-height:13px;"> Tanggal </label>
-            </span>
-            <span class="form-sub-label-container" style="vertical-align:top;">
-              <img alt="Pick a Date" id="input_9_pick" src="https://cdn.jotfor.ms/images/calendar.png" style="vertical-align:middle;" data-component="datetime" />
-              <label class="form-sub-label" for="input_9_pick" style="min-height:13px;">  </label>
-            </span>
-          </div>
-        </div>
-      </li>
-      <li class="form-line" data-type="control_textarea" id="id_7">
-        <label class="form-label form-label-left form-label-auto" id="label_7" for="input_7"> Pesan Jika ada </label>
-        <div id="cid_7" class="form-input jf-required">
-          <textarea id="input_7" class="form-textarea" name="q7_7" cols="40" rows="6" data-component="textarea"></textarea>
-        </div>
-      </li>
-      <li class="form-line" data-type="control_button" id="id_13">
-        <div id="cid_13" class="form-input-wide">
-          <div style="margin-left:156px;" class="form-buttons-wrapper">
-            <button id="input_13" type="submit" class="form-submit-button" data-component="button">
-              Order
-            </button>
-          </div>
-        </div>
-      </li>
-      <li style="display:none">
-        Should be Empty:
-        <input type="text" name="website" value="" />
-      </li>
-    </ul>
-  </div>
-  <script>
-  JotForm.showJotFormPowered = "new_footer";
-  </script>
-  <input type="hidden" id="simple_spc" name="simple_spc" value="72397973779481" />
-  <script type="text/javascript">
-  document.getElementById("si" + "mple" + "_spc").value = "72397973779481-72397973779481";
-  </script>
-  <div class="formFooter-heightMask">
-  </div>
-  <div class="formFooter">
-    <a href="https://www.jotform.com/?utm_source=formfooter&utm_medium=banner&utm_term=72397973779481&utm_content=jotform_logo&utm_campaign=powered_by_jotform_signup_hp" target="_blank" class="formFooter-logoLink"><img class="formFooter-logo" src="https://cdn.jotfor.ms/assets/img/logo/logo-new@1x.png" alt="" style="height: 44px;"></a>
-    <div class="formFooter-rightSide">
-      <span class="formFooter-text">
-        Now create your own JotForm - It's free!
-      </span>
-      <a class="formFooter-button" href="https://www.jotform.com/?utm_source=formfooter&utm_medium=banner&utm_term=72397973779481&utm_content=jotform_button&utm_campaign=powered_by_jotform_signup_hp" target="_blank">Create your own JotForm</a>
-    </div>
-  </div>
-</form>
-
+  </form></body>
+  </html>
+  <script type="text/javascript">JotForm.ownerView=true;</script>
