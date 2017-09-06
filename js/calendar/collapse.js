@@ -1,22 +1,3 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Marketplace
-Explore
- @superbog
- Sign out
- Watch 7,059
-  Star 114,750
-  Fork 53,558 twbs/bootstrap
- Code  Issues 268  Pull requests 120  Projects 6 Insights 
-Branch: master Find file Copy pathbootstrap/js/collapse.js
-df08d95  on Jul 25, 2016
-@cvrebert cvrebert Update version numbers in preparation for v3.3.7 release (#20357)
-15 contributors @fat @mdo @cvrebert @hnrch02 @XhmikosR @HillTravis @ktzhu @patrickhlauke @jdiamond @ijcheung @sody @Kronuz @daguej @colllin @juthilo
-RawBlameHistory     
-213 lines (157 sloc)  5.85 KB
 /* ========================================================================
  * Bootstrap: collapse.js v3.3.7
  * http://getbootstrap.com/javascript/#collapse
