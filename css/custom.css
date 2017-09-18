@@ -57,3 +57,21 @@
     line-height: 28px;
     color: #8d8f92;
   }
+  .button-phone {
+    
+    color: #fff;
+    background-color: #fff;
+    border-color: #ccc;
+    padding: 15px;
+  }
+  .button-phone > .a {
+    color: #655E7A;
+  }
+
+    @media (max-width: 769px) {
+      #feature {
+        background-image: none;
+        text-align: center;
+        
+      }
+    }
